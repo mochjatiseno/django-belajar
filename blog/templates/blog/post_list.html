@@ -24,5 +24,17 @@
             <h2><a href=""><font color="green">Posting Kedua</font></a></h2>
             <p>Belajar untuk persiapan</p>
         </div>
+
+        <div>
+            <h1><a href="/">Looping</a></h1>
+        </div>
+
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
